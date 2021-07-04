@@ -1,0 +1,13 @@
+<div class="container-sm products-container">
+    <!-- Title -->
+    <p class="fs-3">Productos/<small class="fs-4">{{title}}</small></p>
+    <div class="container products-container">
+        <!-- List of product's cards -->
+        <div class="row text-center">
+            <div class="col-4 text-center" *ngFor="let product of products">
+                <!-- Products Card -->
+                <app-product-card [product]="product" [detailsHidden]="false"></app-product-card>
+            </div>
+        </div>
+    </div>
+</div>

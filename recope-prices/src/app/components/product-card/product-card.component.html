@@ -1,0 +1,34 @@
+<div class="container">
+    <!-- Product Price -->
+    <div class="container animated fadeIn fast">
+        <img [src]="product.nomprod | productImage" alt="product.nomprod" class="dispenser-container" />
+        <div class="price-value animated fadeIn">
+            {{ product.preciototal | currency: "CRC":"symbol-narrow" }}
+        </div>
+    </div>
+    <!-- Product Details -->
+    <div class="container p-1 fadeIn fast" *ngIf="!detailsHidden">
+        <h4 class="text-center mt-4">Detalles</h4>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                Producto: <small>{{ product.nomprod }}</small>
+            </li>
+            <li class="list-group-item">
+                Precio sin impuesto:
+                <small>{{ product.precsinimp | currency: "CRC":"symbol-narrow" }}</small>
+            </li>
+            <li class="list-group-item">
+                Impuesto:
+                <small>{{ product.impuesto | currency: "CRC":"symbol-narrow" }}</small>
+            </li>
+            <li class="list-group-item">
+                Precio con impuesto:
+                <small>{{ product.preciototal | currency: "CRC":"symbol-narrow" }}</small>
+            </li>
+            <li class="list-group-item">
+                Última actualización:
+                <small>{{ product.fechaupd | date: "MM/dd/yyyy" }}</small>
+            </li>
+        </ul>
+    </div>
+</div>
