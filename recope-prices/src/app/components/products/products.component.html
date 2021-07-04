@@ -1,0 +1,37 @@
+<div class="container-sm">
+    <!-- Title -->
+    <p class="fs-1 text-center">Nuestros productos</p>
+
+    <div class="container cards-container">
+        <div class="row text-center">
+            <div class="col text-center"></div>
+            <!-- Consumer Products Card -->
+            <div class="col text-center card-menu" (click)="showConsumerProducts()">
+                <div class="card" style="width: 18rem">
+                    <img [src]="consumerImg" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <p class="fs-3 text-center">Consumidores</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Vendor Products Card -->
+            <div class="col text-center card-menu" (click)="showVendorProducts()">
+                <div class="card" style="width: 18rem">
+                    <img [src]="vendorImg" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <p class="fs-3 text-center">Distribuidores</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col text-center"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <app-products-list [title]="'Consumidores'" [products]="consumerProducts" [hidden]="consumerProductsHidden"></app-products-list>
+        </div>
+        <div class="row">
+            <app-products-list [title]="'Distribuidores'" [products]="vendorProducts" [hidden]="vendorProductsHidden"></app-products-list>
+        </div>
+    </div>
+</div>
