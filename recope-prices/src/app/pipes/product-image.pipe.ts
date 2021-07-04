@@ -6,9 +6,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class ProductImagePipe implements PipeTransform {
 
   transform(value: unknown, ...args: unknown[]): string {
-    console.log(value);
-    console.log(`./assets/images/products/${value}.png`);
-
     return `./assets/images/products/${value}.png`;
   }
 
