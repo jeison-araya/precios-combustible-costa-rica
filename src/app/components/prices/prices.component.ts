@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { RecopeApiService } from '../../services/recope-api.service';
 
 @Component({
   selector: 'app-prices',
@@ -14,4 +13,9 @@ export class PricesComponent implements OnInit {
 
   ngOnInit(): void { }
 
+  filteredList(): any[] {
+    return this.products.filter(function(product){
+      return product.nomprod != 'KEROSENE';
+    });
+  }
 }

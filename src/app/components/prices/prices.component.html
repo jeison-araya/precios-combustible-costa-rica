@@ -1,10 +1,10 @@
-<div class="container-sm">
+<div class="container-fluid prices-main-container animated fadeIn">
     <!-- Title -->
-    <p class="fs-1 text-center">Precios</p>
+    <p class="fs-1 text-center text-light">PRECIOS</p>
+    <!-- List of product's cards -->
     <div class="container prices-container">
-        <!-- List of product's cards -->
         <div class="row text-center">
-            <div class="col text-center" *ngFor="let product of products">
+            <div class="col text-center" *ngFor="let product of filteredList()">
                 <!-- Products Card -->
                 <app-product-card [product]="product" [detailsHidden]="true"></app-product-card>
             </div>

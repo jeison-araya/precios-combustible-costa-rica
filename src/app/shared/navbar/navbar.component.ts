@@ -12,4 +12,9 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  scrollTo(id: string): void {
+    const productsDiv = document.getElementById(id);
+    if(productsDiv) { productsDiv.scrollIntoView(); }
+  }
+
 }

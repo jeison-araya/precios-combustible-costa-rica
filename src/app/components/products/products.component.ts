@@ -8,25 +8,41 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ProductsComponent implements OnInit {
   @Input() consumerProducts: any[] = [];
   @Input() vendorProducts: any[] = [];
-  
+
   consumerProductsHidden = true;
   vendorProductsHidden = true;
 
   consumerImg = './assets/images/car.png';
   vendorImg = './assets/images/truck.jpg';
 
+  vendorDiv = document.getElementById("");
   constructor() { }
 
   ngOnInit(): void {
   }
 
   showConsumerProducts(): void {
-    this.vendorProductsHidden = true;
-    this.consumerProductsHidden = false;
+    if(!this.consumerProductsHidden){
+      this.consumerProductsHidden = true;
+    } else {
+      this.scrollToProducts();
+      this.vendorProductsHidden = true;
+      this.consumerProductsHidden = false;
+    }
   }
 
   showVendorProducts(): void {
-    this.consumerProductsHidden = true;
-    this.vendorProductsHidden = false;
+    if(!this.vendorProductsHidden){
+      this.vendorProductsHidden = true;
+    } else {
+      this.scrollToProducts();
+      this.consumerProductsHidden = true;
+      this.vendorProductsHidden = false;
+    }
+  }
+
+  private scrollToProducts(): void {
+    const productsDiv = document.getElementById("products-list");
+    if(productsDiv) { productsDiv.scrollIntoView(); }
   }
 }

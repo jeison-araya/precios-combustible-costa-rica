@@ -1,4 +1,4 @@
-<div class="container-sm">
+<div class="container-fluid products-container">
     <!-- Title -->
     <p class="fs-1 text-center">Nuestros productos</p>
 
@@ -6,7 +6,7 @@
         <div class="row text-center">
             <div class="col text-center"></div>
             <!-- Consumer Products Card -->
-            <div class="col text-center card-menu" (click)="showConsumerProducts()">
+            <div class="col text-center card-menu rounded" (click)="showConsumerProducts()">
                 <div class="card" style="width: 18rem">
                     <img [src]="consumerImg" class="card-img-top" alt="..." />
                     <div class="card-body">
@@ -15,7 +15,7 @@
                 </div>
             </div>
             <!-- Vendor Products Card -->
-            <div class="col text-center card-menu" (click)="showVendorProducts()">
+            <div class="col text-center card-menu rounded" (click)="showVendorProducts()">
                 <div class="card" style="width: 18rem">
                     <img [src]="vendorImg" class="card-img-top" alt="..." />
                     <div class="card-body">
@@ -26,12 +26,8 @@
             <div class="col text-center"></div>
         </div>
     </div>
-    <div class="container">
-        <div class="row">
-            <app-products-list [title]="'Consumidores'" [products]="consumerProducts" [hidden]="consumerProductsHidden"></app-products-list>
-        </div>
-        <div class="row">
-            <app-products-list [title]="'Distribuidores'" [products]="vendorProducts" [hidden]="vendorProductsHidden"></app-products-list>
-        </div>
+    <div class="products-grid" id="products-list">
+        <app-products-list [title]="'CONSUMIDORES'" [products]="consumerProducts" [hidden]="consumerProductsHidden"></app-products-list>
+        <app-products-list [title]="'DISTRIBUIDORES'" [products]="vendorProducts" [hidden]="vendorProductsHidden"></app-products-list>
     </div>
 </div>
