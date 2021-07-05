@@ -1,27 +1,38 @@
-# RecopePrices
+<img src="https://cdn.icon-icons.com/icons2/1199/PNG/512/1490971315-map-icons-10_82741.png" alt="Combustible logo" title="LOGO" align="right" height="72"/>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.5.
 
-## Development server
+## Precios Combustibles - CR
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+<p align="right">
+    <img src="https://img.shields.io/website?label=WEBSITE&url=https%3A%2F%2Frecope-prices.herokuapp.com">
+    <img src="https://img.shields.io/github/v/release/jeison-araya/recope-prices">
+</p>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Este es el repositorio ofical de la aplicación Precios Combustibles - CR. Aquí se encuentra infomación actualizada sobre los productos y precios del combustible en Costa Rica. Esta aplicación consume los datos de la <a href="https://datosabiertos.recope.go.cr/servicio-api">API de RECOPE.</a>
 
-## Build
+Visita nuestra página en <a>https://recope-prices.herokuapp.com</a>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+<br>
 
-## Running unit tests
+**⚙️ Tecnologías utilizadas:**
+1. Angular 12.
+2. Node JS.
+3. Bootstrap v5.
+4. Express.
+5. Deployed in Heroku
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+---
 
-## Running end-to-end tests
+**📌 Funciones:**
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+* Datos actualizados sobre los precios y productos de RECOPE.
+    * Consumidores (Precio estaciones de servicio).
+    * Distribuidores (Precio en plantel).
+<br>
 
-## Further help
+---
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+**👨‍💼 Desarrollado por**
+* [Jeison Araya Mena](https://github.com/jeison-araya "Github profile") | <small>Estudiante de Informática Empresarial - UCR</small>
