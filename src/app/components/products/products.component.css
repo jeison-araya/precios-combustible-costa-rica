@@ -5,3 +5,9 @@
 .card-menu {
     cursor: pointer;
 }
+
+.products-container {
+    margin: 0;
+    margin-top: 0;
+    background-color: #f2f2f2;
+}
