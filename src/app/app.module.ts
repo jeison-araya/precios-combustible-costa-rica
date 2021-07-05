@@ -13,6 +13,10 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { ProductsComponent } from './components/products/products.component';
 import { PricesComponent } from './components/prices/prices.component';
 import { ProductImagePipe } from './pipes/product-image.pipe';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PriceLabelColorPipe } from './pipes/price-label-color.pipe';
+import { MainContentComponent } from './components/main-content/main-content.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -24,7 +28,10 @@ import { ProductImagePipe } from './pipes/product-image.pipe';
     NavbarComponent,
     ProductsComponent,
     PricesComponent,
-    ProductImagePipe
+    ProductImagePipe,
+    PriceLabelColorPipe,
+    MainContentComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +39,8 @@ import { ProductImagePipe } from './pipes/product-image.pipe';
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule,
- 
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
