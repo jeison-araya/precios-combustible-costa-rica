@@ -1,14 +1,19 @@
 .price-value {
-    top: 50%;
-    text-align: center;
     color: black;
     font-family: Verdana, sans-serif;
     font-size: 175%;
-    position: relative;
+    position: absolute;
+    top: 28%;
+    left: 50%;
     transform: translate(-50%, -50%);
 }
 
 .dispenser-container {
-    width: 50%;
-    height: 50%;
+    position: relative;
+    text-align: center;
+}
+
+.dispenser-image {
+    width: 80%;
+    height: 80%;
 }

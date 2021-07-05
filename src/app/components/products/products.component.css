@@ -1,5 +1,6 @@
 .cards-container {
     margin-top: 7%;
+    margin-bottom: 3%;
 }
 
 .card-menu {
@@ -8,6 +9,11 @@
 
 .products-container {
     margin: 0;
+    padding-left: 0%;
+    padding-right: 0%;
     margin-top: 0;
-    background-color: #f2f2f2;
+}
+
+.products-grid {
+    background-color: #ffffff;
 }

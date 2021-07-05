@@ -1,4 +1,7 @@
 .products-container {
-    margin: 5%;
-    padding-top: 5%;
+    margin-top: 7%;
+}
+
+.custom-container {
+    padding: 5%;
 }
