@@ -1,6 +1,11 @@
-<div class="continer-fluid products-component">
+<div id="main-content" class="continer-fluid animated fadeIn">
+    <app-main-content></app-main-content>
+</div>
+<div id="products-menu" class="continer-fluid products-component animated fadeIn">
     <app-products [consumerProducts]="consumerProducts" [vendorProducts]="vendorProducts"></app-products>
 </div>
-<div class="continer-fluid products-component">
+<div id="prices-menu" class="continer-fluid prices-component animated fadeIn">
     <app-prices [products]="consumerProducts" class="prices-component"></app-prices>
 </div>
+<div id="footer" class="continer-fluid animated fadeIn">
+    <app-footer></app-footer>
