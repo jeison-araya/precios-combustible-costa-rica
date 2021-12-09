@@ -1,7 +1,7 @@
 <!-- Product Price -->
 <div class="container dispenser-container animated fadeIn fast">
     <img [src]="product.nomprod | productImage" alt="product.nomprod" class="dispenser-image" />
-    <div class="price-value" [ngClass]="product.nomprod | priceLabelColor">
+    <div class="fs-2 price-value"  [ngClass]="[priceTextClass, product.nomprod | priceLabelColor]">
         {{ product.preciototal | currency: "CRC":"symbol-narrow" }}
     </div>
 </div>
