@@ -4,9 +4,8 @@
 
     <div class="container cards-container">
         <div class="row text-center">
-            <div class="col text-center"></div>
             <!-- Consumer Products Card -->
-            <div class="col text-center card-menu rounded" (click)="showConsumerProducts()">
+            <div class="col m-2 d-flex justify-content-center card-menu rounded" (click)="showConsumerProducts()">
                 <div class="card" style="width: 18rem">
                     <img [src]="consumerImg" class="card-img-top" alt="..." />
                     <div class="card-body">
@@ -15,7 +14,7 @@
                 </div>
             </div>
             <!-- Vendor Products Card -->
-            <div class="col text-center card-menu rounded" (click)="showVendorProducts()">
+            <div class="col m-2 d-flex justify-content-center card-menu rounded" (click)="showVendorProducts()">
                 <div class="card" style="width: 18rem">
                     <img [src]="vendorImg" class="card-img-top" alt="..." />
                     <div class="card-body">
@@ -23,7 +22,6 @@
                     </div>
                 </div>
             </div>
-            <div class="col text-center"></div>
         </div>
     </div>
     <div class="products-grid" id="products-list">
