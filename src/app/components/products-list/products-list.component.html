@@ -3,8 +3,8 @@
     <p class="fs-2 text-primary">Productos {{title}}</p>
     <!-- List of product's cards -->
     <div class="container products-container">
-        <div class="row text-center">
-            <div class="col-4 text-center" *ngFor="let product of products">
+        <div class="row justify-content-center">
+            <div class="col-md-3 col-sm-2 justify-content-center" *ngFor="let product of products">
                 <!-- Products Card -->
                 <app-product-card [product]="product" [detailsHidden]="false"></app-product-card>
             </div>
