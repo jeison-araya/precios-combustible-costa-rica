@@ -6,7 +6,7 @@
         <div class="row justify-content-center">
             <div class="col-md-3 col-sm-2 justify-content-center" *ngFor="let product of products">
                 <!-- Products Card -->
-                <app-product-card [product]="product" [detailsHidden]="false"></app-product-card>
+                <app-product-card [product]="product" [detailsHidden]="false" [priceTextClass]="'fs-4'"></app-product-card>
             </div>
         </div>
     </div>
