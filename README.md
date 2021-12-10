@@ -6,7 +6,7 @@
 ---
 
 <p align="right">
-    <img src="https://img.shields.io/website?label=WEBSITE&url=https%3A%2F%2Frecope-prices.herokuapp.com">
+    <img src="https://img.shields.io/website?label=WEBSITE&url=https://precios-recope.jeisonaraya.com">
     <img src="https://img.shields.io/github/v/release/jeison-araya/recope-prices">
 </p>
 
