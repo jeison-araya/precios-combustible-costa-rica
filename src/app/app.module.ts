@@ -15,9 +15,9 @@ import { PricesComponent } from './components/prices/prices.component';
 import { ProductImagePipe } from './pipes/product-image.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PriceLabelColorPipe } from './pipes/price-label-color.pipe';
-import { MainContentComponent } from './components/main-content/main-content.component';
 import { FooterComponent } from './components/footer/footer.component';
-
+import { AuthModule } from '@auth0/auth0-angular';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -30,19 +30,23 @@ import { FooterComponent } from './components/footer/footer.component';
     PricesComponent,
     ProductImagePipe,
     PriceLabelColorPipe,
-    MainContentComponent,
-    FooterComponent
+    FooterComponent,
+    DashboardComponent,
   ],
   imports: [
+    AuthModule.forRoot({
+      domain: 'cold-sun-1053.us.auth0.com',
+      clientId: 'Ct70bYPDZuGlcutBDKsopqnnsXHMDTzH',
+    }),
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

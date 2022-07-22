@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, Inject, OnInit } from '@angular/core';
+
+import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
   selector: 'app-navbar',
@@ -7,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Inject(DOCUMENT) public document: Document, public auth: AuthService) { }
 
   ngOnInit(): void {
   }
@@ -17,4 +20,17 @@ export class NavbarComponent implements OnInit {
     if(productsDiv) { productsDiv.scrollIntoView(); }
   }
 
+  showUser() {
+    this.auth.getIdTokenClaims().subscribe({
+      next: (token) => {
+        console.log(token);
+      }
+    })
+
+    // this.auth.getUser().subscribe({
+    //   next: (user) => {
+    //     console.log(user);
+    //   }
+    // });
+  }
 }

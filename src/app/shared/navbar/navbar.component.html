@@ -9,9 +9,15 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link" (click)="scrollTo('main-content')" routerLinkActive="active">Inicio</a>
-                    <a class="nav-link" (click)="scrollTo('products-menu')" routerLinkActive="active">Productos</a>
-                    <a class="nav-link" (click)="scrollTo('prices-menu')" routerLinkActive="active">Precios</a>
+                  <a class="nav-link" (click)="scrollTo('prices-menu')" routerLinkActive="active">Precios</a>
+                  <a class="nav-link" (click)="scrollTo('products-menu')" routerLinkActive="active">Productos</a>
+                  <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
+                    <a class="nav-link" (click)="showUser()" routerLinkActive="active">perfil</a>
+                    <a class="nav-link" (click)="auth.logout({ returnTo: document.location.origin })" routerLinkActive="active">Salir</a>
+                  </ng-container>
+                  <ng-template #loggedOut>
+                    <a class="nav-link" (click)="auth.loginWithRedirect()" routerLinkActive="active">Ingresar</a>
+                  </ng-template>
                 </div>
             </div>
         </div>
