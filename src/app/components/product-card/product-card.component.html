@@ -1,7 +1,13 @@
 <!-- Product Price -->
 <div class="container dispenser-container animated fadeIn fast">
     <img [src]="product.nomprod | productImage" alt="product.nomprod" class="dispenser-image" />
-    <div class="fs-2 price-value"  [ngClass]="[priceTextClass, product.nomprod | priceLabelColor]">
+    <div class="fs-5 price-value d-none d-lg-block"  [ngClass]="[priceTextClass, product.nomprod | priceLabelColor]">
+        {{ product.preciototal | currency: "CRC":"symbol-narrow" }}
+    </div>
+    <div class="fs-6 price-value d-none d-lg-none d-md-block"  [ngClass]="[priceTextClass, product.nomprod | priceLabelColor]">
+        {{ product.preciototal | currency: "CRC":"symbol-narrow" }}
+    </div>
+    <div class="fs-1 price-value d-md-none d-sm-block"  [ngClass]="[priceTextClass, product.nomprod | priceLabelColor]">
         {{ product.preciototal | currency: "CRC":"symbol-narrow" }}
     </div>
 </div>
