@@ -1,16 +1,16 @@
 <!-- Product Price -->
-<div class="container dispenser-container animated fadeIn fast">
+<div [id]="id" class="container dispenser-container animated fadeIn fast">
     <img [src]="product.nomprod | productImage" alt="product.nomprod" class="dispenser-image" />
     <ng-container *ngIf="showPrices">
-        <div class="fs-4 price-value d-none d-lg-block" [ngClass]="[product.nomprod | priceLabelColor]">
+        <span [id]="id + '-price'" class="fs-4 price-value d-none d-lg-block" [ngClass]="[product.nomprod | priceLabelColor]">
             ₡{{ product.preciototal | number: '1.0-0' }}
-        </div>
-        <div class="fs-6 price-value d-none d-lg-none d-md-block" [ngClass]="[product.nomprod | priceLabelColor]">
+        </span>
+        <span [id]="id + '-price'" class="fs-6 price-value d-none d-lg-none d-md-block" [ngClass]="[product.nomprod | priceLabelColor]">
             ₡{{ product.preciototal | number: '1.0-0' }}
-        </div>
-        <div class="fs-1 price-value d-md-none d-sm-block" [ngClass]="[product.nomprod | priceLabelColor]">
+        </span>
+        <span [id]="id + '-price'" class="fs-1 price-value d-md-none d-sm-block" [ngClass]="[product.nomprod | priceLabelColor]">
             ₡{{ product.preciototal | number: '1.0-0' }}
-        </div>
+        </span>
     </ng-container>
 </div>
 <!-- Product Details -->

@@ -6,7 +6,7 @@
         <div class="row text-center">
             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 text-center" *ngFor="let product of filteredList()">
                 <!-- Products Card -->
-                <app-product-card [product]="product" [detailsHidden]="true"></app-product-card>
+                <app-product-card [product]="product" [detailsHidden]="true" [id]="product.id + '-product'"></app-product-card>
             </div>
         </div>
     </div>
