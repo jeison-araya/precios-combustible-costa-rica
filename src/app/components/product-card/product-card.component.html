@@ -2,14 +2,14 @@
 <div class="container dispenser-container animated fadeIn fast">
     <img [src]="product.nomprod | productImage" alt="product.nomprod" class="dispenser-image" />
     <ng-container *ngIf="showPrices">
-        <div class="fs-5 price-value d-none d-lg-block"  [ngClass]="[product.nomprod | priceLabelColor]">
-            {{ product.preciototal | currency: "CRC":"symbol-narrow" }}
+        <div class="fs-4 price-value d-none d-lg-block" [ngClass]="[product.nomprod | priceLabelColor]">
+            ₡{{ product.preciototal | number: '1.0-0' }}
         </div>
-        <div class="fs-6 price-value d-none d-lg-none d-md-block"  [ngClass]="[product.nomprod | priceLabelColor]">
-            {{ product.preciototal | currency: "CRC":"symbol-narrow" }}
+        <div class="fs-6 price-value d-none d-lg-none d-md-block" [ngClass]="[product.nomprod | priceLabelColor]">
+            ₡{{ product.preciototal | number: '1.0-0' }}
         </div>
-        <div class="fs-1 price-value d-md-none d-sm-block"  [ngClass]="[product.nomprod | priceLabelColor]">
-            {{ product.preciototal | currency: "CRC":"symbol-narrow" }}
+        <div class="fs-1 price-value d-md-none d-sm-block" [ngClass]="[product.nomprod | priceLabelColor]">
+            ₡{{ product.preciototal | number: '1.0-0' }}
         </div>
     </ng-container>
 </div>
