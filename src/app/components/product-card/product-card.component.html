@@ -1,15 +1,17 @@
 <!-- Product Price -->
 <div class="container dispenser-container animated fadeIn fast">
     <img [src]="product.nomprod | productImage" alt="product.nomprod" class="dispenser-image" />
-    <div class="fs-5 price-value d-none d-lg-block"  [ngClass]="[priceTextClass, product.nomprod | priceLabelColor]">
-        {{ product.preciototal | currency: "CRC":"symbol-narrow" }}
-    </div>
-    <div class="fs-6 price-value d-none d-lg-none d-md-block"  [ngClass]="[priceTextClass, product.nomprod | priceLabelColor]">
-        {{ product.preciototal | currency: "CRC":"symbol-narrow" }}
-    </div>
-    <div class="fs-1 price-value d-md-none d-sm-block"  [ngClass]="[priceTextClass, product.nomprod | priceLabelColor]">
-        {{ product.preciototal | currency: "CRC":"symbol-narrow" }}
-    </div>
+    <ng-container *ngIf="showPrices">
+        <div class="fs-5 price-value d-none d-lg-block"  [ngClass]="[product.nomprod | priceLabelColor]">
+            {{ product.preciototal | currency: "CRC":"symbol-narrow" }}
+        </div>
+        <div class="fs-6 price-value d-none d-lg-none d-md-block"  [ngClass]="[product.nomprod | priceLabelColor]">
+            {{ product.preciototal | currency: "CRC":"symbol-narrow" }}
+        </div>
+        <div class="fs-1 price-value d-md-none d-sm-block"  [ngClass]="[product.nomprod | priceLabelColor]">
+            {{ product.preciototal | currency: "CRC":"symbol-narrow" }}
+        </div>
+    </ng-container>
 </div>
 <!-- Product Details -->
 <div class="container p-1 fadeIn fast" *ngIf="!detailsHidden">
@@ -28,7 +30,7 @@
         </li>
         <li class="list-group-item">
             Precio con impuesto:
-            <small>{{ product.preciototal | currency: "CRC":"symbol-narrow" }}</small>
+            <b><small>{{ product.preciototal | currency: "CRC":"symbol-narrow" }}</small></b>
         </li>
         <li class="list-group-item">
             Última actualización:
