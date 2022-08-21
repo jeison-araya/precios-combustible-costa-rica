@@ -4,9 +4,9 @@
     <!-- List of product's cards -->
     <div class="container products-container">
         <div class="row justify-content-center">
-            <div class="col-md-3 col-sm-2 justify-content-center" *ngFor="let product of products">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 justify-content-center" *ngFor="let product of products">
                 <!-- Products Card -->
-                <app-product-card [product]="product" [detailsHidden]="false" [priceTextClass]="'fs-4'"></app-product-card>
+                <app-product-card [product]="product" [detailsHidden]="false" [showPrices]="true"></app-product-card>
             </div>
         </div>
     </div>

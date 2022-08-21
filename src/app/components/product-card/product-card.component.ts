@@ -9,7 +9,8 @@ export class ProductCardComponent implements OnInit {
 
   @Input() product: any;
   @Input() detailsHidden = true;
-  @Input() priceTextClass = '';
+  @Input() showPrices = true;
+  @Input() id = '';
 
   constructor() { }
 
