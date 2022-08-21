@@ -15,7 +15,6 @@ import { PricesComponent } from './components/prices/prices.component';
 import { ProductImagePipe } from './pipes/product-image.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PriceLabelColorPipe } from './pipes/price-label-color.pipe';
-import { MainContentComponent } from './components/main-content/main-content.component';
 import { FooterComponent } from './components/footer/footer.component';
 
 
@@ -30,7 +29,6 @@ import { FooterComponent } from './components/footer/footer.component';
     PricesComponent,
     ProductImagePipe,
     PriceLabelColorPipe,
-    MainContentComponent,
     FooterComponent
   ],
   imports: [
